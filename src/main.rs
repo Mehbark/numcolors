@@ -3,7 +3,6 @@ use itertools::Itertools;
 use std::{
     collections::{HashMap, HashSet},
     env,
-    fmt::Display,
 };
 
 fn main() {
@@ -24,7 +23,7 @@ fn main() {
     println!("{}", get_out(amounts));
 }
 
-fn get_out(amounts: HashMap<String, usize>) -> impl Display {
+fn get_out(amounts: HashMap<String, usize>) -> String {
     match amounts.len() {
         0 => "".to_string(),
         1 => {
